@@ -1,0 +1,47 @@
+= tailwind_rails_scaffold
+
+A scaffold generator for Rails 6 that uses tailwind 2.x
+
+== Features
+
+* Automatically generates the appropriate model associations for ActiveRecord
+
+== Rails versions
+
+6.x
+
+== Install
+
+Put this line in your Gemfile:
+  gem 'tailwind_rails_scaffold'
+
+Then bundle:
+  % bundle
+
+== Usage
+
+  % rails generate tailwind_rails_scaffold:tailwind_rails_scaffold resource_name [field:type field:type] [options]
+
+== Example
+
+
+== Options
+
+Basically same as the original scaffold.
+
+== TODO / known issues
+
+
+== Contributing to tailwind_rails_scaffold
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+
+== Copyright
+
+Copyright (c) 2021 Roger Heykoop. See LICENSE.txt for
+further details.
+

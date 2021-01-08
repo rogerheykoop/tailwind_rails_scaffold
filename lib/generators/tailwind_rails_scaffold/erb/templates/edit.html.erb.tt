@@ -1,0 +1,24 @@
+<h1 class="text-2xl font-bold text-gray-300 antialiased">Editing <%= singular_table_name.titleize %></h1>
+
+<div id="<%= singular_table_name.titleize %>_form">
+<%%= render 'form',<%= singular_table_name %>: @<%= singular_table_name %> %>
+</div>
+
+<div class="pt-10">
+<span class="relative z-0 inline-flex shadow-md rounded-md text-xs font-extralight">
+  <%%= link_to <%= index_helper %>_path, :class=>"relative hover:bg-indigo-600 hover:text-white inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-gray-700 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" do %>
+<svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
+</svg>
+<%%= t :Back %>
+  <%% end %>
+    <%%= link_to @<%= singular_table_name %>, :class=>"relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white hover:text-white hover:bg-indigo-600 text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" do%>
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <%%= t :Details %>
+  <%% end %>
+
+</span>
+</div>
+

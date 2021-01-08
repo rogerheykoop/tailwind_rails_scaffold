@@ -1,0 +1,8 @@
+Description:
+    Generates tailwind rails scaffold
+
+Example:
+    rails g tailwind_rails_scaffold name_of_resource name:string age:integer
+
+    This will create:
+        name_of_resource {model, controller, helper, views, tests}
