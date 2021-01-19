@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = 'tailwind_rails_scaffold'
-  s.version = '0.1.5'
+  s.version = '0.1.6'
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ['Roger Heykoop']
-  s.date = '2020-12-29'
+  s.date = '2021-01-19'
   s.description = 'Tailwind Rails Scaffold generator for Rails 6.1'
   s.email = 'roger@heykoop.nl'
   s.extra_rdoc_files = ['LICENSE.txt', 'README.rdoc']
