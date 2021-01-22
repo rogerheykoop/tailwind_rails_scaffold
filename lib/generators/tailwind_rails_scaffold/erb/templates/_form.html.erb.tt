@@ -51,6 +51,9 @@
           <% elsif attribute.attachments? -%>
             <%%= form.label :<%= attribute.column_name %>, :class=>"block text-sm font-extralight text-gray-700" %>
             <%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>,multiple: true, :class=>"shadow-inner focus:shadow-lg bg-gray-100 focus:bg-yellow-100 px-1 py-1 focus:ring-yellow-300 focus:ring-1 focus:outline-none focus:border-0 block w-full sm:text-sm border-gray-300 rounded-md" %>
+          <% elsif attribute.field_type == "datetime_select" -%>
+            <%%= form.label :<%= attribute.column_name %>, :class=>"block text-sm font-extralight text-gray-700" %>
+            <%%= form.<%= attribute.date_field %> :<%= attribute.column_name %>, { behavior: "flatpickr",:class=>"flatpickr shadow-inner focus:shadow-lg bg-gray-100 focus:bg-yellow-100 px-1 py-1 focus:ring-yellow-300 focus:ring-1 focus:outline-none focus:border-0 block w-full sm:text-sm border-gray-300 rounded-md" %>
           <% else -%>
             <%%= form.label :<%= attribute.column_name %>, :class=>"block text-sm font-extralight text-gray-700" %>
             <%%= form.<%= attribute.field_type %> :<%= attribute.column_name %>, :class=>"shadow-inner focus:shadow-lg bg-gray-100 focus:bg-yellow-100 px-1 py-1 focus:ring-yellow-300 focus:ring-1 focus:outline-none focus:border-0 block w-full sm:text-sm border-gray-300 rounded-md" %>

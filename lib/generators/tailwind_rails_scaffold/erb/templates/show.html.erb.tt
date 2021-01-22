@@ -1,7 +1,8 @@
 <p id="notice"><%%= notice %></p>
 
-<h1 class="text-2xl font-bold text-gray-300 antialiased"><%= singular_table_name.capitalize %> Details</h1>
-  <div class="md:grid md:grid-cols-3 md:gap-6">
+<h1 class="text-2xl font-bold text-gray-300 antialiased"><%%= t("show_<%= singular_table_name %>").titleize %></h1>
+
+<div class="md:grid md:grid-cols-3 md:gap-6">
     <div class="md:col-span-1">
       <div class="px-4 sm:px-0">
       </div>
@@ -12,7 +13,7 @@
      <% attributes.reject(&:password_digest?).each do |attribute| -%>
       <div class="<%%= cycle("bg-white", "bg-grey-50") -%> px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-light text-gray-500">
-        <%= attribute.human_name %>
+        <%%= t("<%= attribute.human_name %>") %>
         </dt>
         <dd class="mt-1 text-sm font-medium text-gray-900 sm:mt-0 sm:col-span-2">
           <% if attribute.attachment? -%>
@@ -31,13 +32,13 @@
 
 <div class="pt-10">
 <span class="relative z-0 inline-flex shadow-md rounded-md text-xs font-extralight">
-  <%%= link_to <%= plural_table_name %>_path, :class=>"relative hover:bg-indigo-500 hover:text-white inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-gray-700 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" do %>
+  <%%= link_to <%= plural_table_name %>_path, :class=>"transition duration-500 relative hover:bg-indigo-500 hover:text-white inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-gray-700 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" do %>
 <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
 </svg>
 <%%= t :Back %>
   <%% end %>
-  <%%= link_to edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), :class=>"relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white hover:text-black hover:bg-yellow-300 text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" do%>
+  <%%= link_to edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), :class=>"transition duration-500 relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white hover:text-black hover:bg-yellow-300 text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" do%>
                     <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                     </svg>

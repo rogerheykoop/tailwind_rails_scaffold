@@ -1,4 +1,4 @@
-<h1 class="text-2xl font-bold text-gray-300 antialiased">Editing <%= singular_table_name.titleize %></h1>
+<h1 class="text-2xl font-bold text-gray-300 antialiased"><%%= t("edit_<%= singular_table_name %>").titleize %></h1>
 
 <div id="<%= singular_table_name.titleize %>_form">
 <%%= render 'form',<%= singular_table_name %>: @<%= singular_table_name %> %>
